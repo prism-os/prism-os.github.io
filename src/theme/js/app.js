@@ -148,4 +148,5 @@ document.addEventListener('DOMContentLoaded',function(){
 		 addNewClass(document.querySelector('.navbar__menu'),'navbar__menu--noMob');
 		 addNewClass(document.querySelector('.navbar__menu-mob'), 'navbar__menu-mob--noMob');
 	};	
+	MicroModal.init({ awaitCloseAnimation: true });
 });

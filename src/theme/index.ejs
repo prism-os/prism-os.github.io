@@ -19,7 +19,7 @@
 					<div class="hero__content__inner" id='navConverter'>
 						<h1 class="hero__title">Write code, hit publish and done!</h1>
 						<p class="hero__text">Your app will be available for anyone to install on any device or board running Prism OS, where it can run besides other apps!</p>
-						<a href="#" class="button button__accent">Coming Soon</a>
+						<a href="javascript:;" class="button button__accent" data-micromodal-trigger="modal-1">Coming Soon</a>
 						<a href="/the-goal" class="button hero__button">Learn more</a>
 					</div>
 				</div>
@@ -109,7 +109,7 @@
 			<div class="cta__inner">
 				<h2 class="cta__title">Learn more</h2>
 				<p class="cta__sub cta__sub--center">Read up on how to install Prism OS and start developing and installing some apps</p>
-				<a href="#" class="button button__accent">Coming Soon</a>
+				<a href="javascript:;" class="button button__accent" data-micromodal-trigger="modal-1">Coming Soon</a>
 			</div>
 		</div>
 	</div>
@@ -133,7 +133,8 @@
 			</div>
 		</div>
 	</div>
-<script src='<%= asset("js/app.min.js") %>'></script>
-<% include ./partials/analytics %>
+	<% include ./partials/modal %>
+	<script src='<%= asset("js/app.min.js") %>'></script>
+	<% include ./partials/analytics %>
 </body>
 </html>
