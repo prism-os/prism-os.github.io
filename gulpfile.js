@@ -83,7 +83,7 @@ gulp.task('build',
 gulp.task('deploy',
 	gulp.series('build', function() { 
   	return gulp.src('./build/**/*')
-			.pipe(ghPages());
+			.pipe(ghPages({ remoteUrl: 'git@github.com:prism-os/prism-os.github.io.git', branch: 'master' }));
 	})
 );
 
