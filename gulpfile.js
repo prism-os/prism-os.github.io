@@ -80,10 +80,12 @@ gulp.task('build',
 );
 
 // Deploy => Deploy to gh-pages of current git repo
-gulp.task('deploy', ['build'], function() {
-  return gulp.src('./build/**/*')
-    .pipe(ghPages());
-});
+gulp.task('deploy',
+	gulp.series('build', function() { 
+  	return gulp.src('./build/**/*')
+			.pipe(ghPages());
+	})
+);
 
 // Build docs => Production-ready documents to upload (build_docs)
 gulp.task('build_docs',
