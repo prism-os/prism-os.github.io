@@ -4,6 +4,8 @@ const reload = browserSync.reload;
 const nodemon = require('gulp-nodemon');
 require('dotenv').config(); // Load environment variables
 
+var ghPages = require('gulp-gh-pages');
+
 /*--- Load Gulp subtasks ---*/
 const requireDir = require('require-dir');
 requireDir('./gulp_tasks',{recurse: true});
@@ -76,6 +78,12 @@ gulp.task('build',
 	gulp.series( 'theme_assets',
 		gulp.parallel('theme_style', 'theme_scripts', 'theme_views'))
 );
+
+// Deploy => Deploy to gh-pages of current git repo
+gulp.task('deploy', ['build'], function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
 
 // Build docs => Production-ready documents to upload (build_docs)
 gulp.task('build_docs',
