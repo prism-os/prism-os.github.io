@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Prism | The Goal</title>
+	<link rel='stylesheet' href='<%= asset("css/style.min.css") %>' />
+</head>
+<body>
+	<% include ./partials/navbar %>
+	<% include ./partials/page_hero %>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container">
+			<div class="page__inner">
+				<div class="page__menu">
+					<ul class="vMenu">
+							<li><a href="/the-goal" class="vMenu--active">The Goal</a></li>
+							<li><a href="/who-is-it-for">Who is it for</a></li>
+							<li><a href="/how-it-works">How it works</a></li>
+					</ul>
+				</div>
+				<div class="page__main">
+					<div class="text-container">
+						<h3 class="page__main__title">The Goal</h3>
+						<p>
+							The goal of Prism OS is to provide developers working on embedded boards like Arduino, ESP8266, ESP32 etc
+							with a platform that allows them to <span class='stress'>build apps and distribute them with ease, without the hassles of flashing, command line etc</span>.
+						</p>
+						<p>
+							The advent of app stores have really simplified the way people install and try out apps today,
+							and it has been the leading reason of success of smartphones amongst general consumers.
+						</p>
+						<p>However with platforms like Arduino, there is no platform where people can release and distribute their applications.</p>
+						<p>Even worse, "installing" an application basically means connecting it physically to a computer and flashing onto it a completely new image, removing existing applications or data that may have been installed already.</p>
+						<p><span class='stress'>Imagine if you could only have one app on your phone and you had to connect it to a computer to change to another app, cleaning out all the data in your phone!</span></p>
+						<p>Prism OS allows users to install apps onto their boards easily by <span class='stress'>just pressing "Install"</span> on the app store and allows multiple apps to coexist together, all on a microcontroller board!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src='<%= asset("js/app.min.js") %>'></script>
+</body>
+</html>
