@@ -4,7 +4,8 @@ const reload = browserSync.reload;
 const nodemon = require('gulp-nodemon');
 require('dotenv').config(); // Load environment variables
 
-var ghPages = require('gulp-gh-pages');
+// var ghPages = require('gulp-gh-pages');
+var ghPages = require('gh-pages');
 
 /*--- Load Gulp subtasks ---*/
 const requireDir = require('require-dir');
@@ -82,8 +83,12 @@ gulp.task('build',
 // Deploy => Deploy to gh-pages of current git repo
 gulp.task('deploy',
 	gulp.series('build', function() { 
-  	return gulp.src('./build/**/*')
-			.pipe(ghPages({ remoteUrl: 'git@github.com:prism-os/prism-os.github.io.git', branch: 'master' }));
+  	// return gulp.src('./build/**/*')
+		//   .pipe(ghPages({ remoteUrl: 'git@github.com:prism-os/prism-os.github.io.git', branch: 'master' }));
+		return ghPages.publish('build', {
+			repo: 'git@github.com:prism-os/prism-os.github.io.git',
+			branch: 'master'
+		});
 	})
 );
 
