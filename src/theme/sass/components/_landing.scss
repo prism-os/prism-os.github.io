@@ -2,6 +2,14 @@
 	padding: 24pt 0;
 }
 
+.landing__section__text{
+	font-weight: 500;
+	color: #111;
+	line-height: 1.9;
+	text-align: center;
+	font-size: 1.3em;
+}
+
 .landing__section:nth-child(odd){
 	background-color: $background-alt;
 	border-top: 1px solid $line;

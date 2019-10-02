@@ -55,6 +55,13 @@
 	@include desktop{
 		max-width: 280px;
 	}
+	&__wide {
+		max-width: 90vw;
+
+		@include desktop{
+			max-width: 400px;
+		}
+	}
 }
 
 .expanded__title{

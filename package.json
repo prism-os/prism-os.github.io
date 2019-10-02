@@ -4,7 +4,10 @@
   "description": "A design system & template to build modern applications that work everywhere",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node_modules/.bin/gulp",
+    "build": "node_modules/.bin/gulp build",
+    "deploy": "node_modules/.bin/gulp deploy"
   },
   "repository": {
     "type": "git",

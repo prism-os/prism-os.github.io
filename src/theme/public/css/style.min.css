@@ -863,6 +863,13 @@ select {
 .landing__section {
   padding: 24pt 0; }
 
+.landing__section__text {
+  font-weight: 500;
+  color: #111;
+  line-height: 1.9;
+  text-align: center;
+  font-size: 1.3em; }
+
 .landing__section:nth-child(odd) {
   background-color: #f7f7f7;
   border-top: 1px solid #eee;
@@ -1223,6 +1230,11 @@ select {
   @media (min-width: 992px) {
     .expanded__image {
       max-width: 280px; } }
+  .expanded__image__wide {
+    max-width: 90vw; }
+    @media (min-width: 992px) {
+      .expanded__image__wide {
+        max-width: 400px; } }
 
 .expanded__title {
   max-width: 550px; }
