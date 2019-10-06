@@ -35,8 +35,4 @@ app.get('/how-it-works', (req,res) => res.render('how-it-works'));
 // app.get('/dashboard', (req,res) => res.render('dashboard')); // Dashboard page
 // app.get('/auth', (req,res) => res.render('auth')); // Authentication page
 
-
-
-
-
 app.listen(3000, () => console.log('Evie app listening on port 3000')); // Initialize the express server
