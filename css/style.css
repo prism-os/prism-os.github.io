@@ -970,6 +970,13 @@ select {
     right: 0px;
     z-index: 3;
     width: 31%; }
+  .hero__scatter__child.fourofour {
+    background-image: url(../images/404.svg);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    width: 80%; }
 
 /*--- CONTENT STYLING ---*/
 .hero__title {
